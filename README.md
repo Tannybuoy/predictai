@@ -3,7 +3,7 @@ Project for Customer Behaviour PredictionIn
 
 ## Running the code 
 These will work in anaconda prompt. Please follow the corresponding instructions for linux.
-1. Clone the respository using `git clone` 
+1. Clone the respository using `git clone https://github.com/Tannybuoy/predictai` 
 2. Redirect to that repository using `cd/Documents/GitHub/predictai`, or whatever the route is in your Desktop
 3. Type `start index.html`
 
