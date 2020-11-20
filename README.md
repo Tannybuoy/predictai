@@ -6,5 +6,6 @@ Thankful for this course project as this project has been used as a means for va
 * Back-end development (Flask)
 * Machine Learning (sklearn python library)
 
-Tutorials followed include https://www.youtube.com/watch?v=99vHH_6F0Ko
-And smooth scroll has been taken from the repo https://github.com/cferdinandi/smooth-scroll
+Tutorials followed for web development https://www.youtube.com/watch?v=99vHH_6F0Ko
+
+Smooth scroll has been taken from the repo https://github.com/cferdinandi/smooth-scroll
