@@ -23,3 +23,4 @@ Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce:
 * Dataset from UCI Machine Learning repo https://archive.ics.uci.edu/ml/datasets/online_retail#
 * Tutorials followed for web development https://www.youtube.com/watch?v=99vHH_6F0Ko
 * Smooth scroll has been taken from the repo https://github.com/cferdinandi/smooth-scroll
+* Dashboard look taken from article https://medium.com/datadriveninvestor/why-consumer-behavior-analysis-is-so-relevant-to-the-ecommerce-business-8f49c250ca9c
