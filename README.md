@@ -11,9 +11,7 @@ These will work in anaconda prompt. Please follow the corresponding instructions
 
 COVID-19 has accelerated the transition from visiting physical stores to online shopping. Predicting customer behavior in the context of e-commerce is steadily gaining importance. It can increase customer satisfaction and sales, resulting in  higher conversion rates and a competitive advantage, by facilitating a more personalized shopping process.
 
-Sara Menker, CEO of Gro Intelligence said:
-
-> Artificial Intelligence is only as good as the Human Intelligence behind it
+![Alt text](https://www.bigcommerce.com/blog/wp-content/uploads/2017/09/How-we-buy-750x1726.jpg)
 
 ## Research
 Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce: Current Tasks, Applications and Methodologies." *International Workshop New Frontiers in Mining Complex Patterns.* 2019 has very clearly looked at prior research done in the fields of customer behaviour prediction and jotted down the results in a tabular manner for convenient comparison across parameters such as *supervised/unsupervised algorithms, business intelligence applications and accuracy*.
