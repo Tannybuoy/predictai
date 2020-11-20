@@ -1,4 +1,4 @@
-# predictai
+# predict.ai
 Project for Customer Behaviour PredictionIn
 
 ## Running the code 
