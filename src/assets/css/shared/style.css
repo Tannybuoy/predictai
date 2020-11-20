@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------
  [Master Stylesheet]
 
-  Project:	Star Admin Free 
+  Project:	Star Admin Free
   Version:	3.5
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
@@ -181,6 +181,48 @@
 *::before,
 *::after {
   box-sizing: border-box; }
+
+  /*----Navigation Bar-----*/
+  #nav-bar
+  {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+  }
+  .navbar-brand img
+  {
+    height: 40px;
+    padding-left: 20px
+  }
+  .navbar-nav li
+  {
+    padding: 0 10px;
+  }
+  .navbar-nav li a
+  {
+    float: right;
+    text-align: left;
+  }
+  #nav-bar ul li a:hover
+  {
+    color: #19b5b1!important;
+  }
+  .navbar
+  {
+    background: #fff;
+  }
+  .navbar-toggler
+  {
+    border: none!important;
+  }
+  .nav-link
+  {
+    color: #555!important;
+    font-weight:500;
+    font-size: 16px;
+  }
+
 
 html {
   font-family: sans-serif;
