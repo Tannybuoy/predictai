@@ -1,7 +1,9 @@
 # predictai
 Project for Customer Behaviour Predication
 
-Thankful for this course project as this project has been used as a means for various learnings
+COVID-19 has accelerated the transition from visiting physical stores to online shopping. Predicting customer behavior in the context of e-commerce is steadily gaining importance. It can increase customer satisfaction and sales, resulting in  higher conversion rates and a competitive advantage, by facilitating a more personalized shopping process.
+
+This project has been used as a means for various learnings
 * Front-end development (HTML, CSS, JS) 
 * Back-end development (Flask)
 * Machine Learning (sklearn python library)
