@@ -6,7 +6,7 @@ COVID-19 has accelerated the transition from visiting physical stores to online 
 This project has been used as a means for various learnings
 * Front-end development (HTML, CSS, JS) 
 * Back-end development (Flask)
-* Machine Learning (sklearn python library)
+* Machine Learning (sklearn, pandas, numpy, matplotlib python libraries)
 
 Tutorials followed for web development https://www.youtube.com/watch?v=99vHH_6F0Ko
 
