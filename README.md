@@ -18,11 +18,11 @@ Sara Menker, CEO of Gro Intelligence said:
 ## Research
 Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce: Current Tasks, Applications and Methodologies." *International Workshop New Frontiers in Mining Complex Patterns.* 2019 has very clearly looked at prior research done in the fields of customer behaviour prediction and jotted down the results in a tabular manner for convenient comparison across parameters such as *supervised/unsupervised algorithms, business intelligence applications and accuracy*.
 
-#### Learnings include
+## Learnings
 * Front-end development (HTML, CSS, JS) 
 * Back-end development (Flask)
 * Machine Learning (sklearn, pandas, numpy, matplotlib python libraries)
 
-Tutorials followed for web development https://www.youtube.com/watch?v=99vHH_6F0Ko
-
-Smooth scroll has been taken from the repo https://github.com/cferdinandi/smooth-scroll
+## References
+* Tutorials followed for web development https://www.youtube.com/watch?v=99vHH_6F0Ko
+* Smooth scroll has been taken from the repo https://github.com/cferdinandi/smooth-scroll
