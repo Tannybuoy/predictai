@@ -20,7 +20,7 @@ Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce:
 * Machine Learning (sklearn, pandas, numpy, matplotlib python libraries)
 
 ## Resources
-* Existing business data science project https://towardsdatascience.com/can-you-predict-if-a-customer-will-make-a-purchase-on-a-website-e6843ec264ae
+* Existing business data science project https://towardsdatascience.com/can-you-predict-if-a-customer-will-make-a-purchase-on-a-website-e6843ec264ae, https://github.com/MartinBeckUT/BDSFinalProject
 * Dataset from UCI Machine Learning repo https://archive.ics.uci.edu/ml/datasets/online_retail#
 * Tutorial followed for web development https://www.youtube.com/watch?v=99vHH_6F0Ko
 * Smooth scroll has been taken from the repo https://github.com/cferdinandi/smooth-scroll
