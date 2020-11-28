@@ -14,10 +14,12 @@ COVID-19 has accelerated the transition from visiting physical stores to online 
 ## Research
 Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce: Current Tasks, Applications and Methodologies." *International Workshop New Frontiers in Mining Complex Patterns.* 2019 has very clearly looked at 65 prior research works done in the fields of customer behaviour prediction and jotted down the results in a tabular manner for convenient comparison across parameters such as *supervised/unsupervised algorithms, business intelligence applications and accuracy*.
 
-## Learnings
+## Softwares and Languages
 * Front-end development (HTML, CSS, JS) 
-* Back-end development (Flask)
 * Machine Learning (sklearn, pandas, numpy, matplotlib python libraries)
+* Website protyping (Adobe XD)
+* Version Control (GitHub, GitHub Desktop)
+* Code editing (Atom)
 
 ## Resources
 * Existing business data science project https://towardsdatascience.com/can-you-predict-if-a-customer-will-make-a-purchase-on-a-website-e6843ec264ae, https://github.com/MartinBeckUT/BDSFinalProject
