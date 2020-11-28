@@ -62,14 +62,27 @@
 }
 .carousel-caption h5
 {
-  color: #fff;
-  font-size: 52px;
+  color: #19b5b1;
+  font-size: 40px;
 }
 .carousel-item img
 {
-  width:100%
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #19b5b1;
 }
 
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #19b5b1;
+}
 /*-------About------*/
 #about
 {
@@ -476,12 +489,12 @@ blockquote::after
 /*-----Footer-----*/
 #footer
 {
-  background: #333;
+  background: #19b5b1;
   color: #fff;
   padding: 12px;
 }
 .fa-heart-o
 {
   margin: 3px;
-  color:red;
+  color:#045b68;
 }
