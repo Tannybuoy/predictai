@@ -1,5 +1,5 @@
 # predict.ai
-Project for Customer Behaviour PredictionIn
+Project for Customer Behaviour Prediction
 
 ## Running the code 
 These will work in anaconda prompt. Please follow the corresponding instructions for linux.
