@@ -23,7 +23,7 @@ Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce:
 
 ## Resources
 * Existing business data science project https://towardsdatascience.com/can-you-predict-if-a-customer-will-make-a-purchase-on-a-website-e6843ec264ae, https://github.com/MartinBeckUT/BDSFinalProject
-* Dashboard protoype https://www.behance.net/gallery/100140281/Covid19-UI-Kit-Free-Download
+* Dashboard prototype https://www.behance.net/gallery/100140281/Covid19-UI-Kit-Free-Download
 * Dataset from UCI Machine Learning repo https://archive.ics.uci.edu/ml/datasets/Online+Shoppers+Purchasing+Intention+Dataset
 * Tutorial followed for web development https://www.youtube.com/watch?v=99vHH_6F0Ko
 * Smooth scroll has been taken from the repo https://github.com/cferdinandi/smooth-scroll
