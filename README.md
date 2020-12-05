@@ -16,8 +16,9 @@ Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce:
 
 ## Softwares and Languages
 * Front-end development (HTML, CSS, JS) 
+* Back-end development (Flask)
 * Machine Learning (sklearn, pandas, numpy, matplotlib python libraries)
-* Website protyping (Adobe XD)
+* Website prototyping (Adobe XD)
 * Version Control (GitHub, GitHub Desktop)
 * Code editing (Atom)
 
