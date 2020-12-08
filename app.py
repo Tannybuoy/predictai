@@ -18,12 +18,15 @@ def trial():
 def man():
     if request.method=='POST':
         data=request.form['nm']
-        data1 = int(request.form['a'])
-        data2 = int(request.form['b'])
-        data3 = int(request.form['c'])
-        data4 = int(request.form['d'])
-        data5 = int(request.form['e'])
-        arr=np.array([[data1, data2, data3, data4, data5]])
+        data1 = (request.form['a'])
+        data2 = (request.form['b'])
+        data3 = (request.form['c'])
+        data4 = (request.form['d'])
+        data5 = (request.form['e'])
+        data6 = (request.form['f'])
+        data7 = (request.form['g'])
+        data8 = (request.form['h'])
+        arr=np.array([[data1, data2, data3, data4, data5, data6, data7, data8]])
         pred=model.predict(arr)
         return render_template("after.html", data=pred, name=data)
     else:

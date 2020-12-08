@@ -55,14 +55,16 @@
     <div id="wrapper">
 
         <h1>CUSTOMER PREDICTION TRIAL</h1>
-        <p>Fill the values of this form to get the result</p>
         <form method="POST" action="{{url_for('man')}}">
           <b>Name: <input type="text" name="nm", placeholder="Enter name"><br><br>
-          <b>Age: <input type="text" name="a", placeholder="Enter age"><br><br>
-          <b>Sex: <input type="text" name="b", placeholder="1 for male, 0 for female"><br><br>
-          <b>Blood pressure: <input type="text" name="c", placeholder="in mg/dl"><br><br>
-          <b>Cholestrol: <input type="text" name="d", placeholder="in mg/dl"><br><br>
-          <b>Fasting Blood Sugar Level: <input type="text" name="e", placeholder="in mg/dl"><br><br>
+          <b>PageValues: <input type="text" name="a", placeholder="Enter Page Value"><br><br>
+          <b>AvgInformational: <input type="text" name="b", placeholder="Informational/ Informational Duration"><br><br>
+          <b>AvgAdministrative: <input type="text" name="c", placeholder="Administrative/ Administrative Duration"><br><br>
+          <b>AvgProductRelated: <input type="text" name="d", placeholder="Product/ Product Duration"><br><br>
+          <b>Visitor Type: <input type="text" name="e", placeholder="1 for New Visitor, otherwise 0"><br><br>
+          <b>SpecialDay: <input type="text" name="f", placeholder="in fraction"><br><br>
+          <b>BounceRates: <input type="text" name="g", placeholder="in fraction (not %)"><br><br>
+          <b>ExitRates: <input type="text" name="h", placeholder="in fraction (not %)"><br><br>
           <p><input type="submit" value="predict"></p>
         </form>
     </div>

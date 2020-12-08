@@ -20,6 +20,10 @@ from sklearn.model_selection import cross_val_score, train_test_split, cross_val
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import accuracy_score
+from sklearn import svm
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
+import pickle
 
 """## Reading Data"""
 
@@ -35,7 +39,7 @@ df['New_Visitor'] = dummiesdf['New_Visitor']
 df['Other'] = dummiesdf['Other']
 df['Returning_Visitor'] = dummiesdf['Returning_Visitor']
 
-dfmonth = pd.get_dummies(df['Month']) 
+dfmonth = pd.get_dummies(df['Month'])
 df.drop('Month', inplace = True, axis = 1)
 dfwithdummies = pd.concat([df, dfmonth], axis = 1, sort = False)
 
@@ -61,10 +65,10 @@ def AvgMinutes(Count, Duration):
     elif Duration != 0:
         output = float(Duration)/float(Count)
     return output
-    
+
 Columns = [['Administrative', 'Administrative_Duration'], ['Informational', 'Informational_Duration'], ['ProductRelated', 'ProductRelated_Duration']]
-    
-    
+
+
 X['AvgAdministrative'] = X.apply(lambda x: AvgMinutes(Count = x['Administrative'], Duration = x['Administrative_Duration']), axis = 1)
 X['AvgInformational'] = X.apply(lambda x: AvgMinutes(Count = x['Informational'], Duration = x['Informational_Duration']), axis = 1)
 X['AvgProductRelated'] = X.apply(lambda x: AvgMinutes(Count = x['ProductRelated'], Duration = x['ProductRelated_Duration']), axis = 1)
@@ -81,9 +85,6 @@ X_rc=pd.DataFrame(X_rc,columns=X.columns)
 
 """## Finding Important Features then Removing from Dataframe"""
 
-from sklearn import svm
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2
 list_one =[]
 feature_ranking = SelectKBest(chi2, k=5)
 fit = feature_ranking.fit(X, Y)
@@ -92,22 +93,23 @@ fmt = '%-8s%-20s%s'
 
 for i, (score, feature) in enumerate(zip(feature_ranking.scores_, X.columns)):
     list_one.append((score, feature))
-    
-dfObj = pd.DataFrame(list_one) 
+
+dfObj = pd.DataFrame(list_one)
 #dfObj.sort_values(by=[0], ascending = False)
 
 X_rc=X_rc[["PageValues", "AvgInformational", "AvgAdministrative", "AvgProductRelated", "New_Visitor", "SpecialDay", "BounceRates", "ExitRates"]]
-X_rc.tail()
 
 #X_rc.drop(['Aug','TrafficType','OperatingSystems','Other','Jul'],axis=1,inplace=True)
 
+# Splitting the Dataset
 X_train1, X_test1, y_train1, y_test1 = train_test_split(X_rc,Y,test_size=.2)
 
-"""## Random Forest Classifier with Feature Selection Dataframe"""
-
+# Instantiating RandomForestClassifier() Model
 clf1 = RandomForestClassifier(n_estimators= 200, max_depth = 30 )
+
+# Training/Fitting the Model
 clf1.fit(X_train1, y_train1)
-y_pred2 = clf1.predict(X_test1)
+
+pickle.dump(clf1, open('iri.pkl', 'wb'))
 
 #accuracy_score(y_test1, y_pred)
-
