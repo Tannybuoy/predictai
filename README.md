@@ -1,6 +1,12 @@
 # predict.ai
 Project for Customer Behaviour Prediction
 
+## Website
+https://stormy-shelf-96682.herokuapp.com/
+
+## Final Presentation
+https://docs.google.com/presentation/d/1kTFsfASfB2CO_APgK2onN76DqwoxsLcrHt_oBwUTeGw/edit?usp=sharing
+
 ## Running the code 
 These will work in anaconda prompt. Please follow the corresponding instructions for linux.
 1. Clone the respository using `git clone https://github.com/Tannybuoy/predictai` 
