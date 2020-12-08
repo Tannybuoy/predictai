@@ -1,0 +1,85 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!----Navigation bar---->
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="{{url_for('static', filename='image/predictailogo.png')}}"</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/#top">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#about">ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#services">SERVICES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#team">OUR TEAM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#price">PRICE PLANS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#testimonials">TESTIMONIALS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#contact">CONTACT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">TRIAL</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</section>
+
+  <div class="body-particles">
+    <!-- Wrapper -->
+    <center>
+    <div id="wrapper">
+
+        <h1>CUSTOMER PREDICTION TRIAL</h1>
+        <p>Fill the values of this form to get the result</p>
+        <form method="POST" action="{{url_for('man')}}">
+          <b>Name: <input type="text" name="nm", placeholder="Enter name"><br><br>
+          <b>Age: <input type="text" name="a", placeholder="Enter age"><br><br>
+          <b>Sex: <input type="text" name="b", placeholder="1 for male, 0 for female"><br><br>
+          <b>Blood pressure: <input type="text" name="c", placeholder="in mg/dl"><br><br>
+          <b>Cholestrol: <input type="text" name="d", placeholder="in mg/dl"><br><br>
+          <b>Fasting Blood Sugar Level: <input type="text" name="e", placeholder="in mg/dl"><br><br>
+          <p><input type="submit" value="predict"></p>
+        </form>
+    </div>
+    </center>
+  </div>
+
+<!---Footer----->
+<section id="footer">
+  <div class="container text-center">
+    <p>Made with <i class="fa fa-heart-o"></i> by Predict.ai</p>
+  </div>
+</section>
+<!---Footer Close------>
+<script src="{{url_for('static', filename='js/smooth-scroll.js')}}"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+  </body>
+
+</html>

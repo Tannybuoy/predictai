@@ -1,0 +1,87 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!----Navigation bar---->
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="{{url_for('static', filename='image/predictailogo.png')}}"</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/#top">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#about">ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#services">SERVICES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#team">OUR TEAM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#price">PRICE PLANS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#testimonials">TESTIMONIALS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#contact">CONTACT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/trial">TRIAL</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</section>
+
+  <div class="body-particles">
+    <!-- Wrapper -->
+    <center>
+    <div id="wrapper">
+
+      <h1>PREDICTION</h1>
+            <h2>Hi {%print(name)%}</h2>
+            {%if data==0%}
+            <h1>You do not have heart disease</h1>
+            <img src="https://assets.lybrate.com/imgs/dt/tp/1b2826163ac8ef0ad58ccd5a3193b3b1/9d17a870774d16466c33e854942ca7ff/24244c.jpg"  width="300" height="200">
+
+            {%else%}
+            <h1>You have a heart disease</h1>
+            <img src="https://www.pbmchealth.org/application/files/5815/8277/9095/PBMC_Qualities_That_Make_a_Good_Cardiologist_IMAGE1.jpeg" alt="heart"  width="300" height="200">
+
+            {%endif%}
+            <br>
+        <a href="/trial">Go back to trial and change values</a>
+    </div>
+    </center>
+  </div>
+
+<!---Footer----->
+<section id="footer">
+  <div class="container text-center">
+    <p>Made with <i class="fa fa-heart-o"></i> by Predict.ai</p>
+  </div>
+</section>
+<!---Footer Close------>
+<script src="{{url_for('static', filename='js/smooth-scroll.js')}}"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+  </body>
+
+</html>
