@@ -3,3 +3,15 @@
 
 # Flask Framework
 Flask==1.0.2
+
+##### Core scientific packages
+jupyter==1.0.0
+matplotlib==3.1.2
+numpy==1.17.3
+pandas==0.25.3
+
+# Easy http requests
+requests==2.22.0
+
+##### Machine Learning packages
+scikit-learn==0.22
