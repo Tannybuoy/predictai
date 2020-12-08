@@ -29,7 +29,7 @@ Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce:
 * Machine Learning (sklearn, pandas, numpy, matplotlib python libraries)
 * Website prototyping (Adobe XD)
 * Version Control (GitHub, GitHub Desktop)
-* Code editing (Atom)
+* Code editing (Atom, Jupyter Notebook, Google Colab)
 
 ## Resources
 * Existing business data science project https://towardsdatascience.com/can-you-predict-if-a-customer-will-make-a-purchase-on-a-website-e6843ec264ae, https://github.com/MartinBeckUT/BDSFinalProject
