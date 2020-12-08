@@ -2,7 +2,7 @@
 Project for Customer Behaviour Prediction
 
 ## Website
-The website has been deployed on Heroku with a Python Flask backend. 
+The website has been deployed on Heroku with a Python Flask backend. requirements.txt and Procfile were added
 https://stormy-shelf-96682.herokuapp.com/
 
 ## Final Presentation
