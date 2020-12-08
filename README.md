@@ -2,11 +2,12 @@
 Project for Customer Behaviour Prediction
 
 ## Website
-The website has been deployed on Heroku with a Python Flask backend. 
+The website has been deployed on Heroku with a Python Flask backend. requirements.txt and Procfile were added
+
 https://stormy-shelf-96682.herokuapp.com/
 
 ## Final Presentation
-https://docs.google.com/presentation/d/1kTFsfASfB2CO_APgK2onN76DqwoxsLcrHt_oBwUTeGw/edit?usp=sharing
+https://docs.google.com/presentation/d/1rYh6_zAKoKAX4GLZ4Oe1jf7hlN7HjH8DIfxbVJld_0U/edit?usp=sharing
 
 ## Running the code 
 These will work in anaconda prompt. Please follow the corresponding instructions for linux.
@@ -22,12 +23,13 @@ COVID-19 has accelerated the transition from visiting physical stores to online 
 Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce: Current Tasks, Applications and Methodologies." *International Workshop New Frontiers in Mining Complex Patterns.* 2019 has very clearly looked at 65 prior research works done in the fields of customer behaviour prediction and jotted down the results in a tabular manner for convenient comparison across parameters such as *supervised/unsupervised algorithms, business intelligence applications and accuracy*.
 
 ## Softwares and Languages
+* Deployment of website (Heroku)
 * Front-end development (HTML, CSS, JS) 
 * Back-end development (Flask)
 * Machine Learning (sklearn, pandas, numpy, matplotlib python libraries)
 * Website prototyping (Adobe XD)
 * Version Control (GitHub, GitHub Desktop)
-* Code editing (Atom)
+* Code editing (Atom, Jupyter Notebook, Google Colab)
 
 ## Resources
 * Existing business data science project https://towardsdatascience.com/can-you-predict-if-a-customer-will-make-a-purchase-on-a-website-e6843ec264ae, https://github.com/MartinBeckUT/BDSFinalProject
