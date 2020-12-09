@@ -6,11 +6,9 @@ The website has been deployed on Heroku with a Python Flask backend. requirement
 
 https://stormy-shelf-96682.herokuapp.com/
 
-## Final Presentation
-https://docs.google.com/presentation/d/1rYh6_zAKoKAX4GLZ4Oe1jf7hlN7HjH8DIfxbVJld_0U/edit?usp=sharing
-
-## Final Brochure
-https://docs.google.com/presentation/d/1y_vf4rX8aY6mEZpT7UfZ8Ak-lDvED-sW3dv6ST8USjA/edit?usp=sharing
+## Documents
+* Presentation: https://docs.google.com/presentation/d/1rYh6_zAKoKAX4GLZ4Oe1jf7hlN7HjH8DIfxbVJld_0U/edit?usp=sharing
+* Brochure: https://docs.google.com/presentation/d/1y_vf4rX8aY6mEZpT7UfZ8Ak-lDvED-sW3dv6ST8USjA/edit?usp=sharing
 
 ## Running the code 
 These will work in anaconda prompt. Please follow the corresponding instructions for linux.
