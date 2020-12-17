@@ -65,7 +65,7 @@ df['Returning_Visitor'] = dummiesdf['Returning_Visitor']
 # In[7]:
 
 
-dfmonth = pd.get_dummies(df['Month']) 
+dfmonth = pd.get_dummies(df['Month'])
 df.drop('Month', inplace = True, axis = 1)
 dfwithdummies = pd.concat([df, dfmonth], axis = 1, sort = False)
 
@@ -123,10 +123,10 @@ def AvgMinutes(Count, Duration):
     elif Duration != 0:
         output = float(Duration)/float(Count)
     return output
-    
+
 Columns = [['Administrative', 'Administrative_Duration'], ['Informational', 'Informational_Duration'], ['ProductRelated', 'ProductRelated_Duration']]
-    
-    
+
+
 X['AvgAdministrative'] = X.apply(lambda x: AvgMinutes(Count = x['Administrative'], Duration = x['Administrative_Duration']), axis = 1)
 X['AvgInformational'] = X.apply(lambda x: AvgMinutes(Count = x['Informational'], Duration = x['Informational_Duration']), axis = 1)
 X['AvgProductRelated'] = X.apply(lambda x: AvgMinutes(Count = x['ProductRelated'], Duration = x['ProductRelated_Duration']), axis = 1)
@@ -146,7 +146,7 @@ sns.heatmap(cor, xticklabels=cor.columns,yticklabels=cor.columns)
 
 
 # Histogram of all features
-for idx,column in enumerate(X.columns): 
+for idx,column in enumerate(X.columns):
     plt.figure(idx)
     X.hist(column=column,grid=False)
 
@@ -233,8 +233,6 @@ from sklearn.ensemble import RandomForestClassifier
 clf = RandomForestClassifier(max_depth=17, random_state=0)
 clf.fit(X_train, y_train)
 y_pred1 = clf.predict(X_test)
-
-
 # In[24]:
 
 
@@ -263,8 +261,8 @@ fmt = '%-8s%-20s%s'
 
 for i, (score, feature) in enumerate(zip(feature_ranking.scores_, X.columns)):
     list_one.append((score, feature))
-    
-dfObj = pd.DataFrame(list_one) 
+
+dfObj = pd.DataFrame(list_one)
 dfObj.sort_values(by=[0], ascending = False)
 
 
@@ -426,7 +424,3 @@ print(roc_auc_score(y_test1, y_pred9))
 
 
 # In[ ]:
-
-
-
-
