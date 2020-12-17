@@ -9,6 +9,9 @@ The website has been deployed on Heroku with a Python Flask backend. requirement
 ## Demo Video
 https://youtu.be/xFt4cl4daKM
 
+## Final Project Report:
+https://docs.google.com/document/d/1f8NwvXWSOlydW0T0ykK91erM6TlOUWtmVCpgPsi-k_0/edit#
+
 ## Running the code 
 These will work in anaconda prompt. Please follow the corresponding instructions for linux.
 1. Clone the respository using `git clone https://github.com/Tannybuoy/predictai` 
