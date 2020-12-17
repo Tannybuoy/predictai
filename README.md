@@ -1,14 +1,13 @@
 # predict.ai
 Project for Customer Behaviour Prediction
+http://www.predictai.design/
+
 
 ## Website
 The website has been deployed on Heroku with a Python Flask backend. requirements.txt and Procfile were added
 
-https://stormy-shelf-96682.herokuapp.com/
-
 ## Documents
 * Presentation: https://docs.google.com/presentation/d/1rYh6_zAKoKAX4GLZ4Oe1jf7hlN7HjH8DIfxbVJld_0U/edit?usp=sharing
-* Brochure: https://docs.google.com/presentation/d/1y_vf4rX8aY6mEZpT7UfZ8Ak-lDvED-sW3dv6ST8USjA/edit?usp=sharing
 
 ## Running the code 
 These will work in anaconda prompt. Please follow the corresponding instructions for linux.
@@ -24,7 +23,7 @@ COVID-19 has accelerated the transition from visiting physical stores to online 
 Cirqueira, Douglas, et al. "Customer Purchase Behavior Prediction in E-commerce: Current Tasks, Applications and Methodologies." *International Workshop New Frontiers in Mining Complex Patterns.* 2019 has very clearly looked at 65 prior research works done in the fields of customer behaviour prediction and jotted down the results in a tabular manner for convenient comparison across parameters such as *supervised/unsupervised algorithms, business intelligence applications and accuracy*.
 
 ## Softwares and Languages
-* Deployment of website (Heroku)
+* Deployment of website (Heroku, Porkbun)
 * Front-end development (HTML, CSS, JS) 
 * Back-end development (Flask)
 * Machine Learning (sklearn, pandas, numpy, matplotlib python libraries)
