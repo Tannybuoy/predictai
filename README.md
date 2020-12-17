@@ -6,13 +6,10 @@ http://www.predictai.design/
 ## Website
 The website has been deployed on Heroku with a Python Flask backend. requirements.txt and Procfile were added
 
-## Documents
-* Presentation: https://docs.google.com/presentation/d/1rYh6_zAKoKAX4GLZ4Oe1jf7hlN7HjH8DIfxbVJld_0U/edit?usp=sharing
-
 ## Running the code 
 These will work in anaconda prompt. Please follow the corresponding instructions for linux.
 1. Clone the respository using `git clone https://github.com/Tannybuoy/predictai` 
-2. Redirect to that repository using `cd/Documents/GitHub/predictai`, or whatever the route is in your Desktop
+2. Redirect to that repository using `cd/Documents/GitHub/predictai`, or the route is in your Desktop
 3. Type `python "app.py"` to open the website in your browser
 
 ## Problem Statement
