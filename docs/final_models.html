@@ -41,8 +41,35 @@
       <div class='octowrap'>
         <a class='octothorpe' href='#section-2'>#</a>
       </div>
-      <p>Based on Shopping Data set from
-UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/Online+Shoppers+Purchasing+Intention+Dataset</p>
+      <p>Based on Shopping Data set from UCI&rsquo;s Machine Learning Repository</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      <ol>
+<li><strong>Predict.ai Website</strong> <a href="http://www.predictai.design/">http://www.predictai.design/</a></li>
+<li><strong>GitHub Repo</strong> <a href="https://github.com/Tannybuoy/predictai">https://github.com/Tannybuoy/predictai</a></li>
+<li><strong>Demo Video</strong> <a href="https://www.youtube.com/watch?v=xFt4cl4daKM/">https://www.youtube.com/watch?v=xFt4cl4daKM/</a></li>
+</ol>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      <p>Importing necessary libraries for running Machine Lerning models</p>
     </div>
     <div class='code'>
       <div class="highlight"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -54,20 +81,39 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
 <span class="kn">import</span> <span class="nn">xgboost</span> <span class="k">as</span> <span class="nn">xgb</span>
-<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
-
-<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-
-
-<span class="n">cd</span> <span class="s2">&quot;/content/drive/My Drive/Colab Notebooks&quot;</span></pre></div>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-3'>
+  <div class='section' id='section-5'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-3'>#</a>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      <h3><span id="google-drive-mount-in-google-colab" href="google-drive-mount-in-google-colab"> Google Drive Mount in Google Colab </span></h3>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      <p>Go to directory containing the dataset</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">cd</span> <span class="s2">&quot;/content/drive/My Drive/Colab Notebooks&quot;</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-7'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-7'>#</a>
       </div>
       <p>Reading shopping data</p>
     </div>
@@ -78,12 +124,29 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-4'>
+  <div class='section' id='section-8'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-4'>#</a>
+        <a class='octothorpe' href='#section-8'>#</a>
       </div>
       <h2>Producing dummy variables for categorical data and cleaning data</h2>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-9'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-9'>#</a>
+      </div>
+      <p>A dummy dataframe is created to clean the dataset and preprocess</p>
+<ol>
+<li><strong>Visitor</strong> - Columns based on New, Returning or Other</li>
+<li><strong>Month</strong> - New columns for each month</li>
+<li><strong>Class</strong> - Column after changing data type to int</li>
+</ol>
     </div>
     <div class='code'>
       <div class="highlight"><pre><span class="n">dummiesdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;VisitorType&#39;</span><span class="p">])</span>
@@ -97,6 +160,7 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
 <span class="n">dfwithdummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">dfmonth</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 
 
+
 <span class="n">dfwithdummies</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Revenue&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 <span class="n">dfwithdummies</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Revenue&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">dfwithdummies</span><span class="p">[</span><span class="s1">&#39;Weekend&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Weekend&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -108,12 +172,16 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-5'>
+  <div class='section' id='section-10'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-5'>#</a>
+        <a class='octothorpe' href='#section-10'>#</a>
       </div>
       <h2>Checking for Collinearity Between Features and Creating Reducing Feature Size</h2>
+<blockquote>
+<p>The cor and heatmap help in visualising correlation between various
+ features. Accordingly we do remove the columns/ pre-process.</p>
+</blockquote>
     </div>
     <div class='code'>
       <div class="highlight"><pre><span class="n">cor</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -121,12 +189,16 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-6'>
+  <div class='section' id='section-11'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-6'>#</a>
+        <a class='octothorpe' href='#section-11'>#</a>
       </div>
-      
+      <blockquote>
+<p>AvgMinutes function is used to calculate the average time
+spent by a customer on the given page. It is obtained by
+dividing the &ldquo;Count&rdquo; by &ldquo;Duration&rdquo;</p>
+</blockquote>
     </div>
     <div class='code'>
       <div class="highlight"><pre><span class="k">def</span> <span class="nf">AvgMinutes</span><span class="p">(</span><span class="n">Count</span><span class="p">,</span> <span class="n">Duration</span><span class="p">):</span>
@@ -134,25 +206,62 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
         <span class="n">output</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">elif</span> <span class="n">Duration</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">output</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">Duration</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">Count</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">output</span>
-
-<span class="n">Columns</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Administrative&#39;</span><span class="p">,</span> <span class="s1">&#39;Administrative_Duration&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Informational&#39;</span><span class="p">,</span> <span class="s1">&#39;Informational_Duration&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;ProductRelated&#39;</span><span class="p">,</span> <span class="s1">&#39;ProductRelated_Duration&#39;</span><span class="p">]]</span>
-
+    <span class="k">return</span> <span class="n">output</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-12'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-12'>#</a>
+      </div>
+      <blockquote>
+<p>Three new column features hence get added and six columns
+can now be dropped</p>
+</blockquote>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">Columns</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Administrative&#39;</span><span class="p">,</span> <span class="s1">&#39;Administrative_Duration&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Informational&#39;</span><span class="p">,</span> <span class="s1">&#39;Informational_Duration&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;ProductRelated&#39;</span><span class="p">,</span> <span class="s1">&#39;ProductRelated_Duration&#39;</span><span class="p">]]</span>
 
 <span class="n">X</span><span class="p">[</span><span class="s1">&#39;AvgAdministrative&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">AvgMinutes</span><span class="p">(</span><span class="n">Count</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Administrative&#39;</span><span class="p">],</span> <span class="n">Duration</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Administrative_Duration&#39;</span><span class="p">]),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">X</span><span class="p">[</span><span class="s1">&#39;AvgInformational&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">AvgMinutes</span><span class="p">(</span><span class="n">Count</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Informational&#39;</span><span class="p">],</span> <span class="n">Duration</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Informational_Duration&#39;</span><span class="p">]),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">X</span><span class="p">[</span><span class="s1">&#39;AvgProductRelated&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">AvgMinutes</span><span class="p">(</span><span class="n">Count</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;ProductRelated&#39;</span><span class="p">],</span> <span class="n">Duration</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;ProductRelated_Duration&#39;</span><span class="p">]),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">X</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Administrative&#39;</span><span class="p">,</span> <span class="s1">&#39;Administrative_Duration&#39;</span><span class="p">,</span><span class="s1">&#39;Informational&#39;</span><span class="p">,</span> <span class="s1">&#39;Informational_Duration&#39;</span><span class="p">,</span><span class="s1">&#39;ProductRelated&#39;</span><span class="p">,</span> <span class="s1">&#39;ProductRelated_Duration&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-
-<span class="n">cor</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">X</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Administrative&#39;</span><span class="p">,</span> <span class="s1">&#39;Administrative_Duration&#39;</span><span class="p">,</span><span class="s1">&#39;Informational&#39;</span><span class="p">,</span> <span class="s1">&#39;Informational_Duration&#39;</span><span class="p">,</span><span class="s1">&#39;ProductRelated&#39;</span><span class="p">,</span> <span class="s1">&#39;ProductRelated_Duration&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-13'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-13'>#</a>
+      </div>
+      <blockquote>
+<p>Correlation matrix is plotted again using sns heatmap to check if the
+correlation between the above dropped six features has been dealt with</p>
+</blockquote>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">cor</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cor</span><span class="p">,</span> <span class="n">xticklabels</span><span class="o">=</span><span class="n">cor</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span><span class="n">yticklabels</span><span class="o">=</span><span class="n">cor</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-7'>
+  <div class='section' id='section-14'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-7'>#</a>
+        <a class='octothorpe' href='#section-14'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-15'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-15'>#</a>
       </div>
       <h2>Quick overview of features</h2>
     </div>
@@ -161,10 +270,10 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-8'>
+  <div class='section' id='section-16'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-8'>#</a>
+        <a class='octothorpe' href='#section-16'>#</a>
       </div>
       <p>Histogram of all features</p>
     </div>
@@ -175,20 +284,29 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-9'>
+  <div class='section' id='section-17'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-9'>#</a>
+        <a class='octothorpe' href='#section-17'>#</a>
       </div>
       <p>Checking for NA values</p>
     </div>
     <div class='code'>
       <div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Feature:&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;# of N/A:&#39;</span><span class="p">,</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;# of N/A:&#39;</span><span class="p">,</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-18'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-18'>#</a>
+      </div>
+      <p>Visualising no of unique values and the unique values in each column of the training dataset</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;####################&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;COLUMN TITLE:&#39;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;# UNIQUE VALUES:&#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()))</span>
@@ -198,10 +316,10 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-10'>
+  <div class='section' id='section-19'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-10'>#</a>
+        <a class='octothorpe' href='#section-19'>#</a>
       </div>
       <p>Scaling to normalize data</p>
     </div>
@@ -209,18 +327,28 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
       <div class="highlight"><pre><span class="n">X_copy</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">rc</span> <span class="o">=</span> <span class="n">RobustScaler</span><span class="p">()</span>
 <span class="n">X_rc</span><span class="o">=</span><span class="n">rc</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_copy</span><span class="p">)</span>
-<span class="n">X_rc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_rc</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">idx</span><span class="p">,</span><span class="n">column</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">X_rc</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+<span class="n">X_rc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_rc</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-20'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-20'>#</a>
+      </div>
+      <p>Plotting the histogram obtained post above processing functions</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">for</span> <span class="n">idx</span><span class="p">,</span><span class="n">column</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">X_rc</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
     <span class="n">X_rc</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="n">column</span><span class="p">,</span><span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-11'>
+  <div class='section' id='section-21'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-11'>#</a>
+        <a class='octothorpe' href='#section-21'>#</a>
       </div>
       <h2>Linear Model with All Features</h2>
     </div>
@@ -231,30 +359,54 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-12'>
+  <div class='section' id='section-22'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-12'>#</a>
+        <a class='octothorpe' href='#section-22'>#</a>
       </div>
       <p>Linear model</p>
     </div>
     <div class='code'>
       <div class="highlight"><pre><span class="n">model</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">SGDClassifier</span><span class="p">()</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
-<span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-23'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-23'>#</a>
+      </div>
+      <p>Accuracy score imported to calculate accuracy</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-24'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-24'>#</a>
+      </div>
+      <p>roc_auc_score imported to calculate accuracy</p>
+<blockquote>
+<p>It illustrates in a binary classifier system the discrimination threshold
+ created by plotting the true positive rate vs false positive rate</p>
+</blockquote>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
 <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-13'>
+  <div class='section' id='section-25'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-13'>#</a>
+        <a class='octothorpe' href='#section-25'>#</a>
       </div>
       <h2>Random Forest with all Features</h2>
     </div>
@@ -270,10 +422,10 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-14'>
+  <div class='section' id='section-26'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-14'>#</a>
+        <a class='octothorpe' href='#section-26'>#</a>
       </div>
       <h2>Finding Important Features then Removing from Dataframe</h2>
     </div>
@@ -281,8 +433,19 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
       <div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span>
 <span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectKBest</span>
 <span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">chi2</span>
-<span class="n">list_one</span> <span class="o">=</span><span class="p">[]</span>
-<span class="n">feature_ranking</span> <span class="o">=</span> <span class="n">SelectKBest</span><span class="p">(</span><span class="n">chi2</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">list_one</span> <span class="o">=</span><span class="p">[]</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-27'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-27'>#</a>
+      </div>
+      <p>SelectKBest to obtain a list of importance of each feature column</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">feature_ranking</span> <span class="o">=</span> <span class="n">SelectKBest</span><span class="p">(</span><span class="n">chi2</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">fit</span> <span class="o">=</span> <span class="n">feature_ranking</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
 
 <span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%-8s%-20s%s</span><span class="s1">&#39;</span>
@@ -291,36 +454,45 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     <span class="n">list_one</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">score</span><span class="p">,</span> <span class="n">feature</span><span class="p">))</span>
 
 <span class="n">dfObj</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">list_one</span><span class="p">)</span>
-<span class="n">dfObj</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-
-<span class="n">X_rc</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Aug&#39;</span><span class="p">,</span><span class="s1">&#39;TrafficType&#39;</span><span class="p">,</span><span class="s1">&#39;OperatingSystems&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;Jul&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfObj</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-28'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-28'>#</a>
+      </div>
+      <p>On seeing the list, we drop the ones which have a very low weightage and less importance</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">X_rc</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Aug&#39;</span><span class="p">,</span><span class="s1">&#39;TrafficType&#39;</span><span class="p">,</span><span class="s1">&#39;OperatingSystems&#39;</span><span class="p">,</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;Jul&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">X_train1</span><span class="p">,</span> <span class="n">X_test1</span><span class="p">,</span> <span class="n">y_train1</span><span class="p">,</span> <span class="n">y_test1</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_rc</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">)</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-15'>
+  <div class='section' id='section-29'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-15'>#</a>
+        <a class='octothorpe' href='#section-29'>#</a>
       </div>
       <h2>Random Forest Classifier with Feature Selection Dataframe</h2>
+<p>Now once again we run Random Forest Classifier, but after retaining only the important features as determined by SelectKBest</p>
     </div>
     <div class='code'>
       <div class="highlight"><pre><span class="n">clf1</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">max_depth</span> <span class="o">=</span> <span class="mi">30</span> <span class="p">)</span>
 <span class="n">clf1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train1</span><span class="p">,</span> <span class="n">y_train1</span><span class="p">)</span>
 <span class="n">y_pred2</span> <span class="o">=</span> <span class="n">clf1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test1</span><span class="p">)</span>
-
 <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test1</span><span class="p">,</span> <span class="n">y_pred2</span><span class="p">)</span>
-
 <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test1</span><span class="p">,</span> <span class="n">y_pred2</span><span class="p">)</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-16'>
+  <div class='section' id='section-30'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-16'>#</a>
+        <a class='octothorpe' href='#section-30'>#</a>
       </div>
       <h2>XGBoost Classifier with Feature Selection Dataframe</h2>
     </div>
@@ -328,17 +500,15 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
       <div class="highlight"><pre><span class="n">model</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">min_child_weight</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>  <span class="n">max_depth</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train1</span><span class="p">,</span> <span class="n">y_train1</span><span class="p">)</span>
 <span class="n">y_pred3</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test1</span><span class="p">)</span>
-
 <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test1</span><span class="p">,</span> <span class="n">y_pred3</span><span class="p">)</span>
-
 <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test1</span><span class="p">,</span> <span class="n">y_pred3</span><span class="p">)</span></pre></div>
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-17'>
+  <div class='section' id='section-31'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-17'>#</a>
+        <a class='octothorpe' href='#section-31'>#</a>
       </div>
       <h2>LogisticRegression with Feature Selection Dataframe</h2>
     </div>
@@ -353,10 +523,10 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-18'>
+  <div class='section' id='section-32'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-18'>#</a>
+        <a class='octothorpe' href='#section-32'>#</a>
       </div>
       <h2>Gaussian Naive Bayes with Feature Selection Dataframe</h2>
     </div>
@@ -370,10 +540,10 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-19'>
+  <div class='section' id='section-33'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-19'>#</a>
+        <a class='octothorpe' href='#section-33'>#</a>
       </div>
       <h2>KNN classifier with Feature Selection Dataframe</h2>
     </div>
@@ -387,10 +557,10 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-20'>
+  <div class='section' id='section-34'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-20'>#</a>
+        <a class='octothorpe' href='#section-34'>#</a>
       </div>
       <h2>SVM Classification with PCA feature reduction technique</h2>
     </div>
@@ -401,7 +571,6 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
 <span class="n">e</span><span class="o">=</span><span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_test1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
 
-
 <span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
 <span class="n">svm</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">()</span>
 <span class="n">svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">y_train1</span><span class="p">)</span>
@@ -411,10 +580,10 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-21'>
+  <div class='section' id='section-35'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-21'>#</a>
+        <a class='octothorpe' href='#section-35'>#</a>
       </div>
       <h2>SVM Classification with  Feature Selection Dataframe</h2>
     </div>
@@ -428,16 +597,15 @@ UCI&rsquo;s Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/
     </div>
   </div>
   <div class='clearall'></div>
-  <div class='section' id='section-22'>
+  <div class='section' id='section-36'>
     <div class='docs'>
       <div class='octowrap'>
-        <a class='octothorpe' href='#section-22'>#</a>
+        <a class='octothorpe' href='#section-36'>#</a>
       </div>
       <h2>Neural Network Classifier With Feature Selection Dataframe</h2>
     </div>
     <div class='code'>
       <div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPClassifier</span>
-
 <span class="n">mlp</span> <span class="o">=</span> <span class="n">MLPClassifier</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">19</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
 <span class="n">mlp</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train1</span><span class="p">,</span><span class="n">y_train1</span><span class="p">)</span>
 <span class="n">y_pred9</span><span class="o">=</span> <span class="n">mlp</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test1</span><span class="p">)</span>
