@@ -1,5 +1,5 @@
 # predict.ai
-Project for Customer Behaviour Prediction
+Project for Customer Behaviour Prediction:
 http://www.predictai.design/
 
 
