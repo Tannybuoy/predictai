@@ -8,6 +8,6 @@ requests
 
 gunicorn==19.6.0
 pandas==0.22.0
-numpy==1.19.4
+numpy==1.22.0
 scipy>=0.19.1
 scikit-learn>=0.18
